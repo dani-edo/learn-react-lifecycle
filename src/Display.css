@@ -17,10 +17,11 @@
 .season-display h1 {
   color: white;
   font-size: 100px;
-  text-shadow: 10px 10px 20px;
+  text-shadow: 10px 10px 20px #dfdfdf;
 }
 .season-display.summer h1 {
-    color: yellow;
+  color: yellow;
+  text-shadow: 10px 10px 20px #c2c200;
 }
 .winter {
   background: url("./Winter.jpg");
