@@ -1,34 +1,69 @@
 .icon-left {
-    position: absolute;
-    left: 0;
-    top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .icon-right {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .season-display {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.season-display h1 {
+  color: white;
+  font-size: 100px;
+  text-shadow: 10px 10px 20px;
+}
+.season-display.summer h1 {
+    color: yellow;
 }
 .winter {
-    background-color: aliceblue;
+  background: url("./Winter.jpg");
+  background-position: center;
 }
 .summer {
-    background-color: burlywood;
+  background: url("./Summer.jpg");
+  background-position: center;
 }
 .season-display.winter i {
-    color: blue;
+  color: rgb(137, 255, 255);
 }
 .season-display.summer i {
-    color: red;
+  color: rgb(255, 255, 157);
+}
+.season-display.summer i,
+.season-display.winter i {
+  -webkit-animation: spinning 4s infinite;
+  -webkit-animation-delay: 0s;
+  animation: spinning 4s infinite;
+  animation-delay: 0s;
 }
 .ui.segment {
-    height: 100vh;
+  height: 100vh;
 }
-.border.red {
-    border: 10px solid red;
+.border.white {
+  border: 10px solid white;
+}
+
+@-webkit-keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }
