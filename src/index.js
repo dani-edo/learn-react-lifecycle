@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Display from './Display';
+import Spinner from "./Spinner";
 
 class App extends React.Component {
   state = {
@@ -24,14 +25,22 @@ class App extends React.Component {
   componentDidUpdate() {
     console.log("komponen udah diupdate");
   }
-  render() {
+  renderContents() {
     if (this.state.lat && !this.state.errorMessage) {
       return <Display lat={this.state.lat} />
     }
     if (!this.state.lat && this.state.errorMessage) {
       return <h1>Error: {this.state.errorMessage}</h1>;
     }
-    return <h1>Loading...</h1>;
+    return <Spinner message="Please accept location request" />
+  }
+
+  render() {
+      return (
+          <div className="border red">
+              {this.renderContents()}
+          </div>
+      )
   }
 }
 
